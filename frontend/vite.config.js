@@ -5,4 +5,8 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
   plugins: [react(), tsconfigPaths()],
+  base: './', // crucial for relative paths on Vercel
+  build: {
+    outDir: 'dist', // ensure this matches vercel.json distDir
+  },
 });
