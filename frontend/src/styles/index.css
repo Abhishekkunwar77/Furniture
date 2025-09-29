@@ -1,0 +1,69 @@
+/* 1️⃣ Import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&display=swap');
+
+/* 2️⃣ Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3️⃣ Global resets */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', sans-serif; /* fallback, no @apply */
+}
+
+* {
+  box-sizing: border-box;
+  line-height: normal;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* 4️⃣ Custom base layer */
+@layer base {
+  body {
+    background-color: white; /* use direct CSS */
+    color: #1A202C;          /* use direct CSS */
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+
+  .font-accent {
+    font-family: 'Playfair Display', serif;
+  }
+
+  .text-brand-primary {
+    color: #8B4513;
+  }
+
+  .text-brand-secondary {
+    color: #F4F1ED;
+  }
+
+  .bg-brand-canvas {
+    background-color: #FEFCF9;
+  }
+
+  .bg-brand-secondary {
+    background-color: #F4F1ED;
+  }
+
+  .border-brand {
+    border-width: 1px;
+    border-color: rgba(139, 69, 19, 0.2);
+  }
+
+  .shadow-brand {
+    box-shadow: 0 4px 12px rgba(139, 69, 19, 0.1);
+  }
+
+  .transition-brand {
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
